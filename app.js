@@ -7,13 +7,16 @@ var number1, result, number2, operator, True = 0, False = 0;
 
 let selectOperator = ["+", "-", "X", "/"];
 
-let btncvp = document.getElementById("btncvp");
+document.getElementById("showResult").addEventListener("click", resultValue);
 
-window.onload = function () {
 
-    number1 = randomNumber(0, 100);
-    number2 = randomNumber(0, 100);
-    operator = selectOperator[3];
+window.onload = newQestions();
+
+function newQestions() {
+
+    number1 = randomNumber(0, 50);
+    number2 = randomNumber(0, 50);
+    operator = selectOperator[randomNumber(0, 3)];
 
     if (operator == "/") {
         while (true) {
@@ -47,13 +50,69 @@ window.onload = function () {
             result = "Geçersiz Seçim";
     }
 
-    document.getElementById("result").innerHTML = result;
+
+    //  document.getElementById("result").innerHTML = result;
 
 }
 
+function resultValue() {
+
+    let answer = Number(document.getElementById("answer").value);
+
+    if (result === answer) {
+
+        True += 1;
+
+    } else {
+
+        False += 1;
+
+    }
+
+    document.getElementById("True").innerHTML = True;
+    document.getElementById("False").innerHTML = False;
+    document.getElementById("answer").value = "";
+    document.getElementById("answer").focus();
+
+    if (True == 10 || False == 10) {
+
+        if (True == 10) {
+            document.getElementById("score").innerHTML = "Tebrikler Kazandınız";
+            document.getElementById("container-main").style.display = "none";
+            setTimeout(() => {
+                window.location.reload();
+            }, 5000);
+        } else {
+            document.getElementById("score").innerHTML = "Kaybettiniz";
+            document.getElementById("container-main").style.display = "none";
+            setTimeout(() => {
+                window.location.reload();
+            }, 5000);
+        }
+
+    }
+
+    newQestions();
+
+}
 
 document.getElementById("refresh").addEventListener("click", function () {
 
     window.location.reload();
+
+});
+
+
+document.body.addEventListener("keydown", function (e) {
+
+    if (e.key == "Enter") {
+
+        if (True < 10 && False < 10) {
+
+            resultValue();
+        } else {
+            console.log("oyun bitti");
+        }
+    }
 
 })

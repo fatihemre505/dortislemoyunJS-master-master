@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dört İslem Oyunu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3965/3965108.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="refresh_button">
+            <button id="refresh"></button>
+        </div>
+
+        <h1>Dört İşlem Oyunu</h1>
+
+        <div class="container-score">
+            <h2>Score</h2>
+            <span id="True">0</span>
+            <span id="False">0</span>
+        </div>
+
+        <div class="container-main">
+
+            <div class="container-operator">
+                <span id="number1">Sayı1</span>
+                <span id="operator">+</span>
+                <span id="number2">Sayı2</span>
+                <span id="">=</span>
+            </div>
+
+            <div class="container-answer">
+                <input type="text" id="answer" autofocus>
+            </div>
+
+            <button id="btncvp">Gönder</button>
+
+        </div>
+
+
+
+    </div>
+
+    <p id="result"></p>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

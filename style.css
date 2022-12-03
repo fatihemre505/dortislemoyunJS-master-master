@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nerko One', cursive;
+    border: none;
+    outline: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #207cca;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 10px;
+    position: relative;
+    border: 3px solid #000;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+    background: #1e5799;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#7db9e8', GradientType=0);
+    /* IE6-9 */
+}
+
+
+.container h1 {
+    font-weight: 400;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    padding: 10px;
+    color: #fff;
+}
+
+.container .container-score {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding: 20px;
+}
+
+.container-score h2 {
+    margin: 10px;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.container-score #True {
+    background-color: green;
+    padding: 15px;
+    font-size: 4rem;
+    border: 3px solid #000;
+    border-radius: 5px;
+    color: #fff;
+    margin: 10px;
+}
+
+.container-score #False {
+    background-color: red;
+    padding: 15px;
+    font-size: 4rem;
+    border: 3px solid #000;
+    border-radius: 5px;
+    color: #fff;
+    margin: 10px;
+}
+
+.container .container-main {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.container-main .container-operator {
+    font-size: 3rem;
+    width: 300px;
+    padding: 0 20px;
+}
+
+.container-main .container-answer input {
+    width: 200px;
+    font-size: 2rem;
+    padding: 10px;
+    background: none;
+    border: 3px solid #000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.container-main .container-answer input::placeholder {
+    color: #000;
+}
+
+.container-main button {
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 2rem;
+    color: #000;
+    border: 3px solid #000;
+    background: transparent;
+    cursor: pointer;
+}
+
+#refresh {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 100%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    background-image: url("images/100487.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    transition: 500ms all ease-in-out;
+}
+
+#refresh:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+
+#refresh_button {
+    position: relative;
+    height: 20px;
+    margin: auto;
+}
